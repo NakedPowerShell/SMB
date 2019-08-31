@@ -1,0 +1,582 @@
+<!doctype html><html amp lang="en"><head><meta charset="utf-8"><title>How I Decreased My Cybersecurity Exposure in 30 Days - BI Goals SMB Cyber Security</title><meta name="description" content=" CISA is part of the Department of Homeland Security "><link rel="canonical" href="https://nakedpowershell.github.io/SMB/how-i-decreased-my-cybersecurity-exposure-in-30-days.html"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css"><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://nakedpowershell.github.io/SMB/amp/how-i-decreased-my-cybersecurity-exposure-in-30-days.html"},"headline":"How I Decreased My Cybersecurity Exposure in 30 Days","datePublished":"2019-08-19T10:35","dateModified":"2019-08-30T04:13","image":{"@type":"ImageObject","url":"https://nakedpowershell.github.io/SMB/media/posts/12/BIGSMB-jay-heike-ciVuEkjOotE-unsplash.jpg-500x.jpg","height":333,"width":500},"description":" CISA is part of the Department of Homeland Security ","author":{"@type":"Person","name":"SMBWriter"},"publisher":{"@type":"Organization","name":"SMBWriter"}}</script><style amp-custom>article,
+aside,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+amp-img {
+  max-width: 100%; }
+
+button,
+input,
+select,
+textarea {
+  font: inherit; }
+
+html {
+  font-size: 1rem; }
+
+body {
+  background: #f1f1f1;
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.6; }
+
+a {
+  color:  #039be5;
+  text-decoration: none;
+  -webkit-transition: all 0.12s linear 0s;
+  -o-transition: all 0.12s linear 0s;
+  transition: all 0.12s linear 0s; }
+
+a:hover {
+  color: #262626;
+  text-decoration: underline;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip: ink; }
+
+a:active {
+  color: #262626; }
+
+a:focus {
+  outline: 2px dotted #039be5; }
+
+figure,
+blockquote,
+p,
+ul,
+ol,
+dl,
+table,
+hr,
+fieldset {
+  margin-top: 1.6rem; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 2.13333rem; }
+
+h1 {
+  font-size: 1.67583rem;
+  font-weight: normal; }
+
+h2 {
+  font-size: 1.4729rem; }
+
+h3 {
+  font-size: 1.29454rem; }
+
+h4 {
+  font-size: 1.13778rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 0.87891rem; }
+
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: 0.8rem; }
+
+b,
+strong {
+  font-weight: 600; }
+
+blockquote {
+  color: #6c7175;
+  font-family: "Droid Serif", "Times", "Source Serif Pro", serif;
+  font-style: italic;
+  padding: 1.33333rem 0.53333rem 1.33333rem 3.2rem;
+  position: relative; }
+  blockquote:before {
+    display: block;
+    content: "\201C";
+    font-size: 4.41226rem;
+    position: absolute;
+    left: 0;
+    top: -12px;
+    color: rgba(108, 113, 117, 0.5); }
+  blockquote > :nth-child(1) {
+    margin-top: 0; }
+
+ul,
+ol {
+  margin-left: 2rem; }
+  ul > li,
+  ol > li {
+    list-style: inherit;
+    padding: 0 0 0.26667rem 0.26667rem; }
+
+dl dt {
+  color: #262626;
+  font-weight: 600; }
+
+code,
+pre {
+  background-color: #f1f1f1;
+  font-family: monospace; }
+
+pre {
+  margin: 1.6rem 0 0;
+  padding: 1.6rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto; }
+  pre > code {
+    color: #262626;
+    padding: 0; }
+
+code {
+  border-radius: 3px;
+  color: #262626;
+  padding: 0.26667rem 0.53333rem; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #d4d4d4;
+  width: 100%;
+  overflow-x: auto;
+  vertical-align: top;
+  text-align: left;
+  white-space: nowrap; }
+  table th {
+    font-weight: 500;
+    padding: 0.53333rem 1.06667rem; }
+  table tr {
+    border-bottom: 1px solid #d4d4d4; }
+    table tr:nth-child(2n) {
+      background: #f1f1f1; }
+  table td {
+    padding: 0.53333rem 1.06667rem; }
+
+figcaption {
+  clear: both;
+  color: rgba(108, 113, 117, 0.6);
+  font-size: 0.82397rem;
+  margin: 0.8rem 0 0;
+  text-align: center; }
+
+sub,
+sup {
+  font-size: 65%; }
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+
+.btn, [type=button],
+[type=submit],
+button {
+  background: #039be5;
+  border: none;
+  border-radius: 2px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.87891rem;
+  font-weight: 500;
+  line-height: 1.9;
+  padding: 0.53333rem 1.33333rem;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all .15s ease;
+  -o-transition: all .15s ease;
+  transition: all .15s ease;
+  width: auto; }
+  .btn:hover, [type=button]:hover,
+  [type=submit]:hover,
+  button:hover {
+    background: #262626;
+    color: #ffffff; }
+  .btn:focus, [type=button]:focus,
+  [type=submit]:focus,
+  button:focus {
+    outline: none; }
+  .btn-outline {
+    border: 1px solid #ddd;
+    background: #ffffff;
+    border-radius: 3px;
+    color: #262626; }
+
+[type=button],
+[type=submit],
+button {
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.navbar {
+  background: #039be5;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  line-height: 3;
+  max-height: 4rem; }
+  .navbar > div {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto; }
+  .navbar a {
+    color: #ffffff;
+    text-decoration: none; }
+  .navbar-sidebar-toggle {
+    left: 0;
+    position: relative;
+    text-indent: -99999rem; }
+    .navbar-sidebar-toggle:before {
+      content: "";
+      display: block;
+      border-top: 0.375rem double #ffffff;
+      border-bottom: 0.125rem solid #ffffff;
+      height: 0.125rem;
+      position: absolute;
+      text-indent: 0;
+      top: 50%;
+      width: 1.3rem;
+      -webkit-transform: translate(0px, -50%);
+      -ms-transform: translate(0px, -50%);
+      transform: translate(0px, -50%); }
+
+
+.logo {
+            display: inline-block;
+  font-weight: 600;
+  line-height: 1;
+            margin: 0 auto;
+            height: 2rem;
+            text-indent: -9999px;
+            width: 240px;vertical-align: middle;
+        }
+        .logo.logo-text {
+            line-height: 2;
+            text-align: center;
+            text-indent: 0;
+        }
+
+amp-sidebar {
+  background: #ffffff;
+  width: 240px; }
+  amp-sidebar > ul {
+    margin: 0.8rem 0 0;
+    padding: 0; }
+    amp-sidebar > ul ul {
+      border-left: 1px solid #d4d4d4;
+      margin: 0.53333rem 0 0; }
+    amp-sidebar > ul li {
+      color: #262626;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      list-style: none;
+      line-height: 1.4;
+      padding: 0.42667rem 1.06667rem; }
+      amp-sidebar > ul li li {
+        font-weight: normal;
+        padding: 0.26667rem 0 0.26667rem 1.06667rem; }
+    amp-sidebar > ul a,
+    amp-sidebar > ul a:visited {
+      color: #262626; }
+
+.bg-white {
+  background: #ffffff; }
+
+.wrap-page {
+  max-width: 700px;
+  margin: 0 auto; }
+
+@media all and (max-width: 43.6875em) {
+  .wrap-inner {
+    padding: 0 6%; } }
+
+.page-title {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  margin-bottom: 0.8rem;
+  padding: 1.6rem 6%; }
+  .page-title > h1 {
+    margin: 0;
+    font-size: 1.29454rem; }
+  .page-title > p {
+    font-size: 0.87891rem;
+    color: #6c7175;
+    line-height: 1.3;
+    margin: 0.26667rem 0 0; }
+  .page-title-author {
+    border-radius: 50%;
+    float: left;
+    height: 2.5rem;
+    width: 2.5rem; }
+    .page-title-author + h1 {
+      margin-left: 3.5rem; }
+      .page-title-author + h1 + p {
+        margin-left: 3.5rem; }
+
+.card {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  margin-bottom: 0.8rem;
+  padding-bottom: 1.06667rem; }
+
+  .card-meta {
+    border-top: 1px solid #d4d4d4;
+    color: rgba(108, 113, 117, 0.6);
+    font-size: 0.7242rem;
+    font-weight: 500;
+    margin-top: 1.06667rem;
+    padding-top: 1.06667rem;
+    text-transform: uppercase; }
+    .card-meta a + time:before {
+      content: "";
+      background: #d4d4d4;
+      display: inline-block;
+      height: 3px;
+      margin: 0 8px;
+      width: 3px;
+      vertical-align: middle;
+      border-radius: 50%; }
+  .card-text {
+    font-size: 0.9375rem;
+    overflow: hidden;
+    padding: 0 6%; }
+    .card-text h2 {
+      font-size: 1.13778rem; }
+
+.post {
+  margin-bottom: 2.13333rem; }
+  .post-featured-image {
+    margin-top: 0;
+    position: relative; }
+    .post-featured-image > figcaption {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+      color: #ffffff;
+      position: absolute;
+      bottom: 0.8rem;
+      padding: 0 0.26667rem;
+      right: 6%; }
+  .post-header {
+    margin-bottom: 2.13333rem; }
+  .post-meta {
+    border-bottom: 1px solid #d4d4d4;
+    color: rgba(108, 113, 117, 0.6);
+    font-size: 0.7242rem;
+    font-weight: 500;
+    margin-top: 1.06667rem;
+    padding-bottom: 1.06667rem;
+    text-transform: uppercase; }
+    .post-meta a + time:before {
+      content: "";
+      background: #d4d4d4;
+      display: inline-block;
+      height: 3px;
+      margin: 0 8px;
+      width: 3px;
+      vertical-align: middle;
+      border-radius: 50%; }
+  .post-tag {
+    margin: 0; }
+    .post-tag > li {
+      display: inline-block;
+      padding: 0; }
+      .post-tag > li a {
+        background: #f1f1f1;
+        border-radius: 2px;
+        color: #6c7175;
+        font-size: 0.77248rem;
+        display: inline-block;
+        margin: 0 0.26667rem 0.26667rem 0;
+        padding: 0.26667rem 0.53333rem; }
+        .post-tag > li a:hover {
+          background: #039be5;
+          color: #ffffff;
+          text-decoration: none; }
+  .post-share {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+    width: 100%; }
+    .post-share amp-social-share {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+      background-size: 24px; }
+  .post-scroll {
+    color: #ffffff;
+    background: #039be5;
+    bottom: 10px;
+    border-radius: 50%;
+    border: none;
+    -webkit-box-shadow: 0 1px 1.5px 0 rgba(38, 38, 38, 0.12), 0 1px 1px 0 rgba(38, 38, 38, 0.24);
+    box-shadow: 0 1px 1.5px 0 rgba(38, 38, 38, 0.12), 0 1px 1px 0 rgba(38, 38, 38, 0.24);
+    font-size: 1.13778rem;
+    height: 46px;
+    opacity: 0;
+    outline: none;
+    position: fixed;
+    padding: 0;
+    right: 4%;
+    visibility: hidden;
+    width: 46px;
+    z-index: 9999; }
+    .post-scroll-marker {
+      height: 0px;
+      position: absolute;
+      top: 100px;
+      width: 0px; }
+        .post-pagination {
+    background: #f1f1f1;
+    -webkit-box-shadow: inset 0 2px 3px rgba(38, 38, 38, 0.1);
+    box-shadow: inset 0 2px 3px rgba(38, 38, 38, 0.1);
+    border-top: 1px solid #d4d4d4;
+    padding: 1.06667rem 0; }
+    .post-pagination > div {
+      line-height: 1.2;
+      padding: 0.53333rem 1.06667rem;
+      text-align: center; }
+      .post-pagination > div span {
+        display: block;
+        color: #6c7175;
+        font-size: 0.7242rem;
+        font-weight: 500;
+        margin-bottom: 0.26667rem;
+        text-transform: uppercase; }
+    .post-pagination-prev a:before {
+      content: "\2190";
+      margin-right: 0.26667rem; }
+    .post-pagination-next a:after {
+      content: "\2192";
+      margin-left: 0.26667rem; }
+
+aside {
+  margin: 1.6rem 0 0; }
+
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: center; }
+
+.align-justify {
+  text-align: justify; }
+
+.msg {
+  border-left: 2px solid transparent;
+  padding: 1.06667rem 1.06667rem; }
+  .msg--highlight {
+    background-color: #fff8e6;
+    border-color: #e2ac4f; }
+  .msg--info {
+    background: rgba(45, 97, 201, 0.03);
+    border-color: #039be5; }
+  .msg--success {
+    background: #f7fbf6;
+    border-color: #5ab44b; }
+  .msg--warning {
+    background: #fff3f3;
+    border-color: #c06367;
+    color: #a94442; }
+
+.dropcap:first-letter {
+  float: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 2.16943rem;
+  line-height: 0.7;
+  margin-right: 0.53333rem;
+  padding: 0.53333rem 0.53333rem 0.53333rem 0; }
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0.8rem 0; }
+  .pagination > a {
+    padding-left: 0;
+    padding-right: 0;
+    width: 49%; }
+  .pagination-right {
+    margin-left: auto; }
+
+.bottom {
+  background: #039be5;
+  color: #ffffff;
+  padding: 1.06667rem 4%;
+  text-align: center; }</style><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><script async src="https://cdn.ampproject.org/v0.js"></script><script custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js" async></script><script custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js" async></script></head><body class="bg-white"><nav class="navbar wrap-inner" id="top"><div><a on="tap:navbar-sidebar.toggle" class="navbar-sidebar-toggle" title="Menu">Menu</a> <a class="logo logo-text" href="https://nakedpowershell.github.io/SMB/amp/">BI Goals SMB Cyber Security</a></div></nav><main class="wrap-page"><article class="post"><figure class="post-featured-image"><amp-img src="https://nakedpowershell.github.io/SMB/media/posts/12/BIGSMB-jay-heike-ciVuEkjOotE-unsplash.jpg-500x.jpg" alt="Reduce your exposure to Cybersecurity threats" srcset="https://nakedpowershell.github.io/SMB/media/posts/12/responsive/BIGSMB-jay-heike-ciVuEkjOotE-unsplash.jpg-500x-xs2.jpg 300w ,https://nakedpowershell.github.io/SMB/media/posts/12/responsive/BIGSMB-jay-heike-ciVuEkjOotE-unsplash.jpg-500x-sm.jpg 480w ,https://nakedpowershell.github.io/SMB/media/posts/12/responsive/BIGSMB-jay-heike-ciVuEkjOotE-unsplash.jpg-500x-md.jpg 768w" sizes="(max-width: 768px) 100vw, 768px" height="333" layout="responsive" width="500"></amp-img><figcaption>Reduce your exposure to Cybersecurity threats</figcaption></figure><div class="wrap-inner"><header class="post-header"><h1>How I Decreased My Cybersecurity Exposure in 30 Days</h1><p class="post-meta">Published by <a href="https://nakedpowershell.github.io/SMB/amp/authors/smb-writer/" rel="nofollow" title="SMBWriter">SMBWriter</a> <time datetime="2019-08-19T10:35">August 19, 2019</time></p></header><p></p><h2 id="mcetoc_1djalig4l0">By following these tips from Homeland Security - (CISA) Cyber Infrastructure, you can drastically reduce your cybersecurity risks like I did.</h2><h3 id="mcetoc_1djh3de800">These cybersecurity tips are sorted by categories and they can help you reduce your SMB exposure to vulnerabilites and security holes.</h3><div class="post__toc"><h3>Table of Contents</h3><ul><li><a href="#mcetoc_1djalig4l0">By following these tips from Homeland Security - (CISA) Cyber Infrastructure, you can drastically reduce your cybersecurity risks like I did.</a><ul><li><a href="#mcetoc_1djh3de800">These cybersecurity tips are sorted by categories and they can help you reduce your SMB exposure to vulnerabilites and security holes.</a></li><li><a href="#mcetoc_1djalig4l1">Threats</a></li><li><a href="#mcetoc_1djalig4l2">Email and Communication</a></li><li><a href="#mcetoc_1djalig4l3">General Information</a></li><li><a href="#mcetoc_1djalig4l4">General Security Information</a></li><li><a href="#mcetoc_1djalig4l5">Mobile Devices</a></li><li><a href="#mcetoc_1djalig4l6">Privacy</a></li><li><a href="#mcetoc_1djalig4l7">Safe Browsing</a></li><li><a href="#mcetoc_1djalig4l8">Software and Applications</a></li><li><a href="#mcetoc_1djalig4l9">Network Defense and Enterprise Security</a></li></ul></li></ul></div><p></p><p></p><p>CISA is part of the <a href="https://www.dhs.gov/">Department of Homeland Security</a></p><p> </p><figure class="post__image"> <amp-img src="file://C:/Users/Richard/Documents/Publii/sites/bi-goals-smb-cyber-security/input/media/posts/16/BIGSMB-idea-2558678_1920.jpg-120x.jpg" sizes="(max-width: 768px) 100vw, 300px" srcset="file://C:/Users/Richard/Documents/Publii/sites/bi-goals-smb-cyber-security/input/media/posts/16/responsive/BIGSMB-idea-2558678_1920.jpg-120x-xs.jpg 300w ,file://C:/Users/Richard/Documents/Publii/sites/bi-goals-smb-cyber-security/input/media/posts/16/responsive/BIGSMB-idea-2558678_1920.jpg-120x-sm.jpg 480w ,file://C:/Users/Richard/Documents/Publii/sites/bi-goals-smb-cyber-security/input/media/posts/16/responsive/BIGSMB-idea-2558678_1920.jpg-120x-md.jpg 768w ,file://C:/Users/Richard/Documents/Publii/sites/bi-goals-smb-cyber-security/input/media/posts/16/responsive/BIGSMB-idea-2558678_1920.jpg-120x-lg.jpg 1024w ,file://C:/Users/Richard/Documents/Publii/sites/bi-goals-smb-cyber-security/input/media/posts/16/responsive/BIGSMB-idea-2558678_1920.jpg-120x-xl.jpg 1360w" alt="Good Idea" width="92" height="92" layout="responsive"></amp-img></figure>    <a href="http://bit.ly/30Ho2E6" target="_blank" rel="noopener noreferrer">Click here to Sign up for a Free 2 Hour SMB Cybersecurity Review</a><p></p><h3 id="mcetoc_1djh3kuo20"> Threats</h3><p></p><p></p><ul><li><a href="https://www.us-cert.gov/ncas/tips/ST19-001">Protecting Against Ransomware</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST18-271">Protecting Against Malicious Code</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST16-001">Securing Voter Registration Data</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST13-003">Handling Destructive Malware</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST06-001">Understanding Hidden Threats: Rootkits and Botnets</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST06-005">Dealing with Cyberbullies</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST06-004">Avoiding the Pitfalls of Online Trading</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-009">Identifying Hoaxes and Urban Legends</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST06-006">Understanding Hidden Threats: Corrupted Software Files</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST10-001">Recognizing Fake Antiviruses</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-016">Recognizing and Avoiding Spyware</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-015">Understanding Denial-of-Service Attacks</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-014">Avoiding Social Engineering and Phishing Attacks</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-019">Preventing and Responding to Identity Theft</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-006">Recovering from Viruses, Worms, and Trojan Horses</a></li></ul><p></p><p></p><h3 id="mcetoc_1djalig4l2">Email and Communication</h3><p></p><p></p><ul><li><a href="https://www.us-cert.gov/ncas/tips/ST06-003">Staying Safe on Social Networking Sites</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-023">Understanding Your Computer: Email Clients</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-018">Understanding Digital Signatures</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-011">Using Instant Messaging and Chat Rooms Safely</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-010">Using Caution with Email Attachments</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-008">Benefits of BCC</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-007">Reducing Spam</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-009">Benefits and Risks of Free Email Services</a></li></ul><p></p><p></p><h3 id="mcetoc_1djalig4l3">General Information</h3><p></p><p></p><ul><li><a href="https://www.us-cert.gov/ncas/tips/ST04-024">Understanding ISPs</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-001">What is Cybersecurity?</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-013">Guidelines for Publishing Information Online</a></li></ul><p></p><p></p><h3 id="mcetoc_1djalig4l4">General Security Information</h3><p></p><p></p><ul><li><a href="https://www.us-cert.gov/ncas/tips/ST18-005">Proper Disposal of Electronic Devices</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST18-002">Defending Against Illicit Cryptocurrency Mining Activity</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST18-001">Securing Network Infrastructure Devices</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST17-001">Securing the Internet of Things</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST15-003">Before You Connect a New Computer to the Internet</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST15-002">Home Network Security</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST15-001">IRS and NCCIC Caution Users: Prepare for Heightened Phishing Risk This Tax Season</a></li><li><a href="https://www.us-cert.gov/ncas/tips/13-002">International Mobile Safety Tips</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-002">Keeping Children Safe Online</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST06-002">Debunking Some Common Myths</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-014">Real-World Warnings Keep You Safe Online</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-005">Understanding Anti-Virus Software</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-004">Understanding Firewalls for Home and Small Office Use</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-003">Good Security Habits</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST06-009">Coordinating Virus and Spyware Defense</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST06-008">Safeguarding Your Data</a></li></ul><p></p><p></p><h3 id="mcetoc_1djalig4l5">Mobile Devices</h3><p></p><p></p><ul><li><a href="https://www.us-cert.gov/ncas/tips/st19-003">Privacy and Mobile Device Apps</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-017">Protecting Portable Devices: Physical Security</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST11-001">Holiday Traveling with Personal Internet-Enabled Devices</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-017">Cybersecurity for Electronic Devices</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST08-001">Using Caution with USB Drives</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-003">Securing Wireless Networks</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-020">Protecting Portable Devices: Data Security</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST06-007">Defending Cell Phones and PDAs Against Attack</a></li></ul><p></p><p></p><h3 id="mcetoc_1djalig4l6">Privacy</h3><p></p><p></p><ul><li><a href="https://www.us-cert.gov/ncas/tips/ST05-012">Supplementing Passwords</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-011">Effectively Erasing Files</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-008">How Anonymous Are You?</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-019">Understanding Encryption</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-013">Protecting Your Privacy</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-002">Choosing and Protecting Passwords</a></li></ul><p></p><p></p><h3 id="mcetoc_1djalig4l7">Safe Browsing</h3><p></p><p></p><ul><li><a href="https://www.us-cert.gov/ncas/tips/ST07-001">Shopping Safely Online</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-015">Understanding Bluetooth Technology</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-010">Understanding Website Certificates</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-004">Avoiding Copyright Infringement</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-022-0">Understanding Your Computer: Web Browsers</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-016">Understanding Internationalized Domain Names</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-001">Evaluating Your Web Browser's Security Settings</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-012">Browsing Safely: Understanding Active Content and Cookies</a></li></ul><p></p><p></p><h3 id="mcetoc_1djalig4l8">Software and Applications</h3><p></p><p></p><ul><li><a href="https://www.us-cert.gov/ncas/tips/ST05-018">Understanding Voice over Internet Protocol (VoIP)</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-007">Risks of File-Sharing Technology</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST05-005">Reviewing End-User License Agreements</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-021">Understanding Your Computer: Operating Systems</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST04-006">Understanding Patches and Software Updates</a></li></ul><p></p><p></p><h3 id="mcetoc_1djalig4l9">Network Defense and Enterprise Security</h3><p></p><p></p><ul><li><a href="https://www.us-cert.gov/ncas/tips/ST19-002">Best Practices for Securing Election Systems</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST18-007">Questions Every CEO Should Ask About Cyber Risks</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST18-006">Website Security</a></li><li><a href="https://www.us-cert.gov/ncas/tips/ST18-247">Securing Enterprise Wireless Networks</a></li></ul><p> </p><figure class="post__image"><amp-img src="file://C:/Users/Richard/Documents/Publii/sites/bi-goals-smb-cyber-security/input/media/posts/16/BIGSMB-idea-2558678_1920.jpg-120x.jpg" sizes="(max-width: 768px) 100vw, 300px" srcset="file://C:/Users/Richard/Documents/Publii/sites/bi-goals-smb-cyber-security/input/media/posts/16/responsive/BIGSMB-idea-2558678_1920.jpg-120x-xs.jpg 300w ,file://C:/Users/Richard/Documents/Publii/sites/bi-goals-smb-cyber-security/input/media/posts/16/responsive/BIGSMB-idea-2558678_1920.jpg-120x-sm.jpg 480w ,file://C:/Users/Richard/Documents/Publii/sites/bi-goals-smb-cyber-security/input/media/posts/16/responsive/BIGSMB-idea-2558678_1920.jpg-120x-md.jpg 768w ,file://C:/Users/Richard/Documents/Publii/sites/bi-goals-smb-cyber-security/input/media/posts/16/responsive/BIGSMB-idea-2558678_1920.jpg-120x-lg.jpg 1024w ,file://C:/Users/Richard/Documents/Publii/sites/bi-goals-smb-cyber-security/input/media/posts/16/responsive/BIGSMB-idea-2558678_1920.jpg-120x-xl.jpg 1360w" alt="Good Idea" width="92" height="92" layout="responsive"></amp-img></figure>    <a href="http://bit.ly/30Ho2E6" target="_blank" rel="noopener noreferrer">Click here to Sign up for a Free 2 Hour SMB Cybersecurity Review</a><p></p><p> </p><p></p><p></p><p></p><aside><ul class="post-tag"><li><a href="https://nakedpowershell.github.io/SMB/amp/tips/">Tips</a></li></ul><div class="post-share"><amp-social-share type="system" width="40" height="40" data-param-text="How I Decreased My Cybersecurity Exposure in 30 Days"></amp-social-share><amp-social-share type="facebook" width="40" height="40" data-param-app_id="" data-param-text="How I Decreased My Cybersecurity Exposure in 30 Days" data-param-href="https://nakedpowershell.github.io/SMB/amp/how-i-decreased-my-cybersecurity-exposure-in-30-days.html"></amp-social-share><amp-social-share type="twitter" width="40" height="40" data-param-text="How I Decreased My Cybersecurity Exposure in 30 Days" data-param-url="https://nakedpowershell.github.io/SMB/amp/how-i-decreased-my-cybersecurity-exposure-in-30-days.html"></amp-social-share><amp-social-share type="pinterest" width="40" height="40" data-param-url="https://nakedpowershell.github.io/SMB/amp/how-i-decreased-my-cybersecurity-exposure-in-30-days.html"></amp-social-share><amp-social-share type="tumblr" width="40" height="40" data-param-text="How I Decreased My Cybersecurity Exposure in 30 Days" data-param-url="https://nakedpowershell.github.io/SMB/amp/how-i-decreased-my-cybersecurity-exposure-in-30-days.html"></amp-social-share><amp-social-share type="whatsapp" width="40" height="40" data-param-text="How I Decreased My Cybersecurity Exposure in 30 Days"></amp-social-share></div></aside></div></article><nav class="post-pagination wrap-inner"><div class="post-pagination-prev"><span>Previous Post</span> <a href="https://nakedpowershell.github.io/SMB/amp/7-ways-cybersecurity-smb.html">7 Ways to Provide Cybersecurity to Your SMB Business</a></div></nav></main><amp-animation id="showAnim" layout="nodisplay"><script type="application/json">{
+                    "duration": "200ms",
+                    "fill": "both",
+                    "iterations": "1",
+                    "direction": "alternate",
+                    "animations": [{
+                        "selector": ".post-scroll",
+                        "keyframes": [{
+                            "opacity": "1",
+                            "visibility": "visible",
+                            "transform": "scale(1)"
+                        }]
+                    }]
+                }</script></amp-animation><amp-animation id="hideAnim" layout="nodisplay"><script type="application/json">{
+                    "duration": "200ms",
+                    "fill": "both",
+                    "iterations": "1",
+                    "direction": "alternate",
+                    "animations": [{
+                        "selector": ".post-scroll",
+                        "keyframes": [{
+                            "opacity": "0",
+                            "visibility": "hidden",
+                            "transform": "scale(0.1)"
+                        }]
+                    }]
+                }</script></amp-animation><div class="post-scroll-marker"><amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay"></amp-position-observer></div><button class="post-scroll" on="tap:top.scrollTo(duration=200)">&#8593;</button><footer class="bottom">Powered by Publii</footer><amp-sidebar id="navbar-sidebar" layout="nodisplay"><ul></ul></amp-sidebar></body></html>
