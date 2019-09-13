@@ -3,7 +3,7 @@
     <title>BI Goals SMB Cyber Security</title>
     <link href="https://nakedpowershell.github.io/SMB/feed.xml" rel="self" />
     <link href="https://nakedpowershell.github.io/SMB" />
-    <updated>2019-09-03T11:30:12-07:00</updated>
+    <updated>2019-09-13T03:24:59-07:00</updated>
     <author>
         <name>SMBWriter</name>
     </author>
@@ -17,19 +17,19 @@
         <link href="https://nakedpowershell.github.io/SMB/how-i-decreased-my-cybersecurity-exposure-in-30-days.html"/>
         <id>https://nakedpowershell.github.io/SMB/how-i-decreased-my-cybersecurity-exposure-in-30-days.html</id>
 
-        <updated>2019-09-03T05:55:42-07:00</updated>
+        <updated>2019-09-13T03:23:40-07:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://nakedpowershell.github.io/SMB/media/posts/12/BIGSMB-jay-heike-ciVuEkjOotE-unsplash.jpg-500x.jpg" alt="Reduce your exposure to Cybersecurity threats" />
-                     CISA is part of the Department of Homeland Security Click here to Sign up for a Free 2 Hour Online&hellip;
+                     CISA is part of the Department of Homeland Security Small and medium sized (SMB) businesses are increasing becoming bigger targets&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                     <img src="https://nakedpowershell.github.io/SMB/media/posts/12/BIGSMB-jay-heike-ciVuEkjOotE-unsplash.jpg-500x.jpg" alt="Reduce your exposure to Cybersecurity threats" />
                 <p><!-- wp:heading --></p>
-<h2 id="mcetoc_1djalig4l0">By following these tips from Homeland Security - (CISA) Cyber Infrastructure, you can drastically reduce your cybersecurity risks like I did.</h2>
-<h3 id="mcetoc_1djh3de800">These sorted cybersecurity tips are by categories, and they can help you reduce your SMB exposure to vulnerabilities and security holes.</h3>
+<h2 id="mcetoc_1djalig4l0">By following these tips from <strong>Homeland Security</strong> - (CISA) Cyber Infrastructure, you can drastically reduce your cybersecurity risks like I did.</h2>
+<h3 id="mcetoc_1djh3de800">These cybersecurity tips are sorted by category, and they can help you reduce your SMB exposure to vulnerabilities and security holes.</h3>
 <div class="post__toc">
 <h3>Table of Contents</h3>
 <ul>
@@ -52,9 +52,9 @@
 <p><!-- /wp:heading --></p>
 <p><!-- wp:paragraph --></p>
 <p>CISA is part of the <a href="https://www.dhs.gov/">Department of Homeland Security</a></p>
-<p> </p>
-<p> <a href="http://bit.ly/30Ho2E6" target="_blank" rel="noopener noreferrer">Click here to Sign up for a Free 2 Hour Online SMB Cybersecurity Review</a></p>
-<p><img class="post__image" src="https://nakedpowershell.github.io/SMB/media/posts/12/a_HP_3.jpg" alt=" Great idea to sign up for a free 2 hour SMB cybersecurity review" width="120" height="180"></p>
+<p class="msg msg--highlight ">Small and medium sized (SMB) businesses are increasing becoming bigger targets for cybercriminals.</p>
+<p class="msg msg--success"> <a href="http://bit.ly/30Ho2E6" target="_blank" rel="noopener noreferrer">Click here to Sign up for a Free 2 Hour Online SMB Cybersecurity Review</a></p>
+<p><img class="post__image" src="https://nakedpowershell.github.io/SMB/media/posts/12/a_Lightbulb.jpg" alt="Great Idea for SMB Cybersecurity" width="87" height="87"></p>
 <p> </p>
 <h3 id="mcetoc_1djh3kuo20"> Threats</h3>
 <p><!-- /wp:heading --></p>
@@ -191,7 +191,7 @@
 <li><a href="https://www.us-cert.gov/ncas/tips/ST18-247">Securing Enterprise Wireless Networks</a></li>
 </ul>
 <p> </p>
-<p> <a href="http://bit.ly/30Ho2E6" target="_blank" rel="noopener noreferrer">Click here to Sign up for a Free 2 Hour Online SMB Cybersecurity Review</a></p>
+<p class="msg msg--info msg--success"> <a href="http://bit.ly/30Ho2E6" target="_blank" rel="noopener noreferrer">Click here to Sign up for a Free 2 Hour Online SMB Cybersecurity Review</a></p>
 <p><img class="post__image" src="https://nakedpowershell.github.io/SMB/media/posts/12/a_Lightbulb.jpg" alt=" Great idea to sign up for a free 2 hour SMB cybersecurity review" width="120" height="120"></p>
 <p> </p>
 <p><!-- /wp:list --></p>
