@@ -3,7 +3,7 @@
     <title>BI Goals SMB Cyber Security</title>
     <link href="https://nakedpowershell.github.io/SMB/feed.xml" rel="self" />
     <link href="https://nakedpowershell.github.io/SMB" />
-    <updated>2019-09-15T05:10:57-07:00</updated>
+    <updated>2019-09-15T05:13:32-07:00</updated>
     <author>
         <name>SMBWriter</name>
     </author>
@@ -17,17 +17,17 @@
         <link href="https://nakedpowershell.github.io/SMB/ransomware.html"/>
         <id>https://nakedpowershell.github.io/SMB/ransomware.html</id>
 
-        <updated>2019-09-15T05:10:49-07:00</updated>
+        <updated>2019-09-15T05:13:24-07:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://nakedpowershell.github.io/SMB/media/posts/25/BIGSMB-hacker-1944688.jpg-500x.jpg" alt="Ransomware Locking Your Data" />
-                    Ransomware Tsunami: The Quickest Way to Protect and RecoverOne of the biggest cybersecurity threats currently is ransomware. It gets a&hellip;
+                    Ransomware Tsunami: The Quickest Way to Protect and Recover One of the biggest cybersecurity threats currently is ransomware. It gets a&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                     <img src="https://nakedpowershell.github.io/SMB/media/posts/25/BIGSMB-hacker-1944688.jpg-500x.jpg" alt="Ransomware Locking Your Data" />
-                <h2 id="mcetoc_1dkpprrm00">Ransomware Tsunami: The Quickest Way to Protect and Recover</h2>
+                <h2 id="mcetoc_1dkpprrm00">Ransomware Tsunami: The Quickest Way to Protect and Recover </h2>
 <p>One of the <strong>biggest</strong> cybersecurity threats currently is <strong>ransomware</strong>. It gets a lot of press and attention, and rightly so.</p>
 <p class="msg msg--highlight ">Ransomware can cripple or push a SMB to bankruptcy within 6 months.</p>
 <p><strong>The statistics are staggering.</strong></p>
